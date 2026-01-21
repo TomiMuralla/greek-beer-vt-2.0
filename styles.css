@@ -25,8 +25,20 @@ h2 {
   display: flex;
   color: white;
   font-family: var(--fuente-anton);
+  font-size: 22px;
   padding: 0.25rem;
+  position: relative;
+   align-items: center;
+}
 
+.center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+   align-items: center;
+   margin: 0.80rem;
 }
 
 .header1 a {
@@ -35,6 +47,29 @@ h2 {
 
 }
 
+.logoico {
+  width: 1.8rem;
+}
+
+/* TEXTO INICIAL OCULTO */
+.headersvg {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow: hidden;          /* CLAVE para que salga desde atrás */
+
+}
+
+.logotext {
+  transform: translateX(-170%);
+  transition: transform 0.3s ease;
+  white-space: nowrap;
+}
+
+/* HOVER SOBRE TODO EL BLOQUE */
+.headersvg:hover .logotext {
+  transform: translateX(0);
+}
 
 
 
@@ -204,18 +239,55 @@ text-align: center;
 
 
 .futer-nomark {
+  width: 100%;
+  max-width: 900px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+
+  padding: 40px 20px;
   color: white;
   background-color: var(--futerheader);
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+
+  justify-items: center;
+  text-align: left;
 }
+
+
 .futer-nomark a{
   text-decoration: none;  
   color: inherit;   
 }
 
+.centrarfuter {
+  background-color: var(--futerheader);
+  display: flex;
+  justify-content: center;
+}
+.futer-nomark > span {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+.list-contac-futer {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-
+.list-contac-futer li a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.futer-nomark nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
 
  /*=================================================================*/
 
@@ -252,4 +324,55 @@ p {
 .contenedor-chopp {
   gap: 0rem;
 }
+ .header1 {
+    justify-content: center;
+    font-size: 15px;
+     align-items: center;
+  }
+
+  .center {
+    position: static;          /* vuelve al flujo normal */
+    transform: none;           /* elimina el translate */
+    left: auto;       
+   justify-content: center; 
+   gap: 0.5rem;       /* limpia left */
+   align-items: center;
+  }
+  .logotext {
+    display: none;
+  }
+
+
+ .futer-nomark {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+    text-align: left;
+  }
+
+  /* TODAS las secciones alineadas igual */
+  .futer-1,
+  .futer-2,
+  .futer-3 {
+    width: 100%;
+    align-items: flex-start;
+  }
+
+  /* Iconos + texto alineados prolijos */
+  .list-contac-futer li {
+    justify-content: flex-start;
+  }
+
+  /* Ajuste de tamaños */
+  .futer-nomark h4 {
+    font-size: 1rem;
+  }
+
+  .futer-nomark a,
+  .futer-nomark li,
+  .futer-nomark span {
+    font-size: 0.8rem;
+  }
+
+
+
 }
