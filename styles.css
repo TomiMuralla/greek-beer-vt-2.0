@@ -1,0 +1,255 @@
+
+:root{
+--fondo-naranja:rgb(250, 176, 65);
+--fuente-global: 'Roboto Slab', serif;
+--fuente-anton: 'Anton', sans-serif;
+--size-parrafo: 20px;
+--futerheader:#2b3c4a;
+
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--fuente-global)
+}
+
+h2 {
+  font-family: var(--fuente-anton);
+  font-size: 40px;
+}
+
+/*=================================================================*/
+.header1 {
+  background-color: #2b3c4a;
+  display: flex;
+  color: white;
+  font-family: var(--fuente-anton);
+  padding: 0.25rem;
+
+}
+
+.header1 a {
+  text-decoration: none;  
+  color: inherit; 
+
+}
+
+
+
+
+ /*=================================================================*/
+
+.carrusel {
+  background-color: var(--fondo-naranja);
+}
+
+.slider {
+  position: relative;
+  overflow: hidden;
+  max-width: 900px;   
+  margin: auto;
+}
+
+.slides {
+  display: flex;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  transition: transform 0.6s ease;
+}
+
+.slide {
+  min-width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 4%;
+  height: 45vh;
+  padding: 1rem;     
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 40%;
+  max-height: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.text {
+  width: 53%;
+  font-size: 1.35rem;
+}
+
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.3);
+  color: white;
+  border: none;
+  font-size: 30px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.prev { left: 10px; }
+.next { right: 10px; }
+
+ /*=================================================================*/
+
+
+.div-1-video {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+
+}
+
+.video1 {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  inset: 0;
+  background: rgba(93, 92, 92, 0.45);
+  pointer-events: none;
+  padding-bottom: 12rem;
+  font-size: 80px;
+  color: white;
+  font-family: var(--fuente-anton)
+}
+
+
+ /*=================================================================*/
+
+
+.Nuestras-cervezas {
+  margin: 1.5rem;
+text-align: center;
+ font-size: var(--size-parrafo);
+}
+
+.imagenes-our-beer {
+  margin:0 auto;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
+  align-items: center;
+  justify-items:center;
+  gap: 1rem;  
+}
+
+.our-greek img{
+  width: 12rem;
+  border-radius: 1rem;
+  transition-duration: 0.6s;
+  transition-property: transform;
+  transition-timing-function: ease;
+  
+}
+.our-greek img:hover{
+
+  transform: scale(1.07);;
+  transition-duration: 0.4s; 
+}
+
+ /*=================================================================*/
+
+
+.Destacado {
+background-color: var(--fondo-naranja);
+padding: 1rem;
+text-align: center;
+ font-size: var(--size-parrafo);
+}
+
+.Destacado img {
+  width: 15rem;
+  border-radius: 1rem;
+  transition-duration: 0.7s;
+  transition-property: transform;
+  transition-timing-function: ease;
+}
+
+.contenedor-chopp {
+  margin:0 auto;
+  max-width: 900px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  align-items: top;
+  justify-items:center;
+  gap: 1rem;  
+}
+
+.Destacado h3{
+  font-family: var(--fuente-anton);
+  font-size: 36px;
+}
+
+.Destacado img:hover{
+
+  transform: scale(1.08);;
+  transition-duration: 0.4s; 
+}
+
+ /*=================================================================*/
+
+
+.futer-nomark {
+  color: white;
+  background-color: var(--futerheader);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.futer-nomark a{
+  text-decoration: none;  
+  color: inherit;   
+}
+
+
+
+
+ /*=================================================================*/
+
+@media (width < 1000px) {
+h2{
+  font-size: 26px;
+}
+p {
+  font-size: 11px;
+}
+  .div-1-video {
+  width: 100%;
+  height: 25vh;
+}
+.overlay {
+  font-size: 32px;
+  padding-bottom: 6rem;
+}
+.text {
+  font-size: 12px;
+}
+.our-greek img{
+  width: 8rem ;
+}
+.Nuestras-cervezas p {
+   font-size: 11px;
+}
+.Destacado img {
+  width: 10rem;
+}
+.contenedor-chopp h3{
+  font-size: 22px;
+}
+.contenedor-chopp {
+  gap: 0rem;
+}
+}
