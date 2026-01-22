@@ -51,12 +51,12 @@ h2 {
   width: 1.8rem;
 }
 
-/* TEXTO INICIAL OCULTO */
+
 .headersvg {
   display: flex;
   align-items: center;
   gap: 8px;
-  overflow: hidden;          /* CLAVE para que salga desde atrás */
+  overflow: hidden;         
 
 }
 
@@ -66,7 +66,6 @@ h2 {
   white-space: nowrap;
 }
 
-/* HOVER SOBRE TODO EL BLOQUE */
 .headersvg:hover .logotext {
   transform: translateX(0);
 }
@@ -276,12 +275,14 @@ text-align: center;
   list-style: none;
   padding: 0;
   margin: 0;
+  
 }
 
 .list-contac-futer li a {
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-top: 5px;
 }
 .futer-nomark nav {
   display: flex;
@@ -289,6 +290,24 @@ text-align: center;
   gap: 6px;
 }
 
+.futer-nomark img {
+  background-color: white;
+  border-radius: 15px;
+}
+
+
+ /*=================================================================*/
+
+.marcas-slide img {
+  width: 10rem;
+}
+.Nuestras-Marcas {
+  margin: auto;
+  text-align: center;
+}
+.carrusel-futer {
+
+}
  /*=================================================================*/
 
 @media (width < 1000px) {
@@ -373,6 +392,8 @@ p {
     font-size: 0.8rem;
   }
 
-
+.marcas-slide img {
+  width: 8rem;
+}
 
 }
