@@ -305,10 +305,41 @@ text-align: center;
   margin: auto;
   text-align: center;
 }
-.carrusel-futer {
 
-}
  /*=================================================================*/
+ /*===================CONTACTO.HTML=================================*/
+
+.contactemos {
+  margin: 0;
+  padding: 0;
+}
+.ven-a-visitar {
+  background-color: var(--fondo-naranja);
+  padding: 2rem 2rem 2rem 2rem;
+}
+
+.ven-a-visitar h2, .ven-a-visitar p {
+margin: 0;
+}
+
+
+.ven-a-visitar p {
+  color: white;
+  font-size: var(--size-parrafo);
+  font-family: var(--fuente-global);
+  font-weight: bold;
+}
+
+
+
+
+
+
+
+
+
+ /*=================================================================*/
+
 
 @media (width < 1000px) {
 h2{
