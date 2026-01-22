@@ -311,7 +311,10 @@ text-align: center;
   margin: auto;
   text-align: center;
 }
-
+.provisional {
+  padding: 1.2rem;
+  padding-bottom: 3rem;
+}
  /*=================================================================*/
  /*===================CONTACTO.HTML=================================*/
 
@@ -390,7 +393,7 @@ margin: 0;
   align-items: center;
   gap: 3rem;
 }
-.nosotros p {
+.nosotros p, .armar-chopp p {
   font-family: var(--fuente-global);
   font-weight:700;
   color: white;
@@ -406,19 +409,66 @@ margin: 0;
   justify-content: center;
     background-color: var(--fondo-naranja);
 }
+ /*========================CATALOGO========================*/
 
+.catalogo-cont {
+  display: flex;
+  justify-content: center; /* centra el UL en la página */
+  padding: 2rem 1rem;
+}
 
+.catalogo1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr)); 
+  gap: 2rem; 
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 60vw;
 
+}
 
+.catalogo1 li {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  text-align: center;
+  background-color: #fff; 
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
 
+.catalogo1 img {
+  width: 10rem;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
 
+.armar-chopp video {
+  width: 18rem;
+  border-radius: 5px;
+}
 
+.armar-choppe {
+  display: flex;
+  justify-content: center;
+    background-color: var(--fondo-naranja);
+}
+.armar-chopp {
+  width: 50rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+    background-color: var(--fondo-naranja);
+    gap: 2rem;
+}
  /*========================MEDIAQUERY========================*/
 
 
 @media (width < 1000px) {
 h2{
-  font-size: 26px;
+  font-size: 24px;
 }
 p {
   font-size: 11px;
@@ -530,7 +580,18 @@ p {
   .nosotros img {
     width: 16rem;
   }
-.nosotros p {
+.nosotros p, .armar-chopp p{
 font-size: 15px;
 }
+.armar-chopp {
+  margin: 0;
+  flex-direction: column;
+  max-width: 100vw;
+  align-content: center;
+ align-items: center;
 }
+.armar-chopp video {
+  width: 60vw;
+}
+}
+
